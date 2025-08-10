@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Grundo Record — Inspiración (poemas)</title>
+  <meta name="description" content="" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+<!-- Favicon & app icons (PNG-only) -->
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#ffffff">
+
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html" aria-label="Inicio">
+      <div class="brand-mark"></div>
+      <span class="brand-name">Grundo Record</span>
+    </a>
+    <nav class="nav-links" aria-label="Principal">
+      <a class="" href="index.html">Inicio</a>
+      <a class="" href="servicios.html">Servicios</a>
+      <a class="" href="proyectos.html">Proyectos</a>
+      <a class="" href="precios.html">Precios</a>
+      <a class="" href="contacto.html">Contacto</a>
+      <a class="active" href="inspiracion.html">Inspiración</a>
+    </nav>
+    <div class="nav-actions">
+      <button id="themeToggle" class="btn-icon" aria-label="Cambiar tema">🌓</button>
+      <button id="menuToggle" class="btn-icon burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">☰</button>
+    </div>
+  </div>
+  <div id="mobileMenu" class="mobile-menu" hidden>
+    <a href="index.html">Inicio</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="proyectos.html">Proyectos</a>
+    <a href="precios.html">Precios</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="inspiracion.html">Inspiración</a>
+  </div>
+</header>
+<main class="section">
+  <div class="container">
+    <h1>Inspiración</h1>
+    <p class="muted">Tu libreta para versos, ideas y frases. Todo se guarda en tu navegador (localStorage).</p>
+
+    <form id="poemForm" class="form" onsubmit="return false;">
+      <div class="form-row">
+        <label>Título
+          <input type="text" id="poemTitle" placeholder="Ej: Máquinas de luz" />
+        </label>
+        <label>Etiqueta
+          <input type="text" id="poemTag" placeholder="Ej: indie, worship, punk" />
+        </label>
+      </div>
+      <label>Contenido
+        <textarea id="poemBody" rows="8" placeholder="Escribe tu poema, idea o frase inspiradora..."></textarea>
+      </label>
+      <div class="row actions">
+        <button id="savePoem" class="btn">Guardar</button>
+        <button id="newPoem" class="btn" type="button">Nuevo</button>
+        <button id="exportPoems" class="btn" type="button">Exportar .txt</button>
+        <input id="searchPoem" class="search" type="search" placeholder="Buscar..." />
+      </div>
+    </form>
+
+    <div id="poemList" class="poem-list"></div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-text">
+      <p>🎶 “Donde cada nota cuenta y cada canción tiene una historia.”</p>
+      <small>© <span id="year"></span> Grundo Record — Inspirando y produciendo música sin límites.</small>
+    </div>
+    <a href="#home" class="top">↑ Volver arriba</a>
+  </div>
+</footer>
+<script src="js/app.js"></script>
+</body>
+</html>
